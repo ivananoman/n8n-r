@@ -42,6 +42,18 @@ services:
         value: fr
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
+services:
+  - type: web
+    name: firecrawl-mcp
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 5678
+
+
+        
 
 databases:
   - name: n8nDB
